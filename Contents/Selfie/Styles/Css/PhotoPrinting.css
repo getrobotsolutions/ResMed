@@ -1,6 +1,6 @@
 html{height: 1600px;}
 
-#container{height: 870px !important;}
+#container{height: 958px !important;}
 #container #contents {position: relative; height: 1180px;}
 #container #contents .photo_btn {position: absolute; display: block; float: left; margin-top: -14px;margin-left: 232px;}
 #container #contents .photo_btn  li {float: left;}
@@ -39,7 +39,7 @@ canvas  {
 }
 
 .pannel {
-	margin-top: 275px;
+	margin-top: 185px;
 	
 	text-align: center;
 }

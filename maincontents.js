@@ -115,7 +115,7 @@ setTimeout(function () {
     var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='f'";
     var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
 
-    /*$.getJSON(queryURL, function (data) {
+    $.getJSON(queryURL, function (data) {
 
         var results = data.query.results;
         var firstResult = results.channel.item.condition;
@@ -136,7 +136,7 @@ setTimeout(function () {
         $('#image-zoom').attr("src",loc);
 
         console.log("Weather Showed");
-    });*/
+    });
 
 }, 2000);
 
@@ -146,8 +146,8 @@ function ShowTime()
 {
     var dt = new Date();
     // formatAMPM(dt);
-    //document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;
-    //document.getElementById("content_date") .innerHTML = formatDate(dt);
+    document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;
+    document.getElementById("content_date") .innerHTML = formatDate(dt);
 
 }
 function formatAMPM(date) {
