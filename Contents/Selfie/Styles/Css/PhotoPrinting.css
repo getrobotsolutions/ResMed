@@ -1,6 +1,6 @@
 html{height: 1600px;}
 
-#container{height: 1180px !important;}
+#container{height: 870px !important;}
 #container #contents {position: relative; height: 1180px;}
 #container #contents .photo_btn {position: absolute; display: block; float: left; margin-top: -14px;margin-left: 232px;}
 #container #contents .photo_btn  li {float: left;}
@@ -13,11 +13,10 @@ body {
 	margin: 0px !important;
 	padding: 0px;
 
-//overflow : hidden;
 }
 
 #wrapper {
-	background-image: url("../../Images/photo_bg_en.png");
+	/*background-image: url("../../Images/photo_bg_en.png");*/
 	background-repeat: no-repeat;
 	background-position-y: -180px;
 }
@@ -40,7 +39,7 @@ canvas  {
 }
 
 .pannel {
-	margin-top: 375px;
+	margin-top: 275px;
 	
 	text-align: center;
 }
