@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+
+    <script language="JavaScript" type="text/javascript" src="Scripts/BaseCommand.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/BaseEvent.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/LogConsole.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/Language.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/custom.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="maincontents.js"></script>
+    <script src="boots/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="boots/css/bootstrap.min.css">
+
+    <link href="css/Main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body  onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
+
+<header>
+    <div class="logo">
+        <img onclick="FC_ContentsCall('Config')" src="assets/logo.png">
+    </div>
+
+    <span class="col-sm-4" style="text-align: left; color: #3c3c3c">
+        <!--<div id= 'appcity'></div>
+          <div id="content_air"></div>
+          <div id="content_date" ></div>
+          <span id="condition"></span>
+        <div>
+            <img id ="image-zoom" style="width: 50px" src="">
+             <span id="temp" ></span>
+        </div>-->
+        <span style="    position: absolute;top: 173px;left: 384px;width: 350px;font-size: 60px;font-weight: bold;    color: #5c399b;">Booth #2116</span>
+        
+    </span>
+
+</header>
+
+<nav>
+
+</nav>
+
+<section class="main-content" style="height: 63%; ">
+   <!--<h1 onclick="FC_ContentsCall('Welcome')" class="title">PRESS HERE TO START</h1>-->
+    <div class="main-menu-matrix">
+      
+        <table>
+            <tr>
+                <td>
+                    <button onclick="FC_ContentsCall('Tips')" class="r1c0">
+                    <img src="assets/icons/compliance.png" style="">
+                        
+                    </button>
+                    <a id="txt_take_selfie">Ways to Improve Compliance</a>
+                </td>
+                <td>
+                    <button onclick="FC_ContentsCall('Dance')" class="r1c0">
+                    <img src="assets/icons/airmini.png">
+                        
+                    </button>
+                    <a id="txt_take_selfie">AirMini</a>
+                </td>
+                <td>
+                    <button onclick="FC_ContentsCall('Products')" class="r0c1">
+                    <img src="assets/icons/respiratory.png">
+                        
+                    </button>
+                    <a id="txt_shopping">Respiratory</a>
+                </td>
+                
+            </tr>
+            
+            <tr>
+                <td>
+                    <button onclick="FC_ContentsCall('Masks')" class="r0c1">
+                    <img src="assets/icons/masks.png"><br>
+                        
+                    </button>
+                    <a id="txt_shopping" style="">Masks</a>
+                </td>
+                
+                <td>
+                    <button onclick="FC_ContentsCall('Avatar')" class="r0c2">
+                    <img src="assets/icons/android.png"><br>
+                        
+                    </button>
+                    <a id="txt_robot_avatar">Robot Avatar</a>
+                </td>
+                <td>
+                    <button onclick="FC_ContentsCall('Selfie')" class="r0c1">
+                    <img src="assets/icons/camera.png"><br>
+                    </button>
+                        <a id="txt_shopping">Take a Photo</a>
+                </td>
+                
+                
+            </tr>
+        </table>
+    </div>
+
+</section>
+
+<footer>
+
+      <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+          <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+          <!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
+          <!--<li data-target="#myCarousel" data-slide-to="4"></li>-->
+          <!--<li data-target="#myCarousel" data-slide-to="5"></li> -->
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner " id="slide" role="listbox">
+
+          <div class="item active">
+            <img class="fixed-height" src="images/slider/1.png" width="460" height="345">
+            <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+
+
+        </div>   
+    </div>
+  
+    <img src="assets/bottom-line.png" onclick="ShowPopup()">
+</footer>
+<div id="dialog-overlay"></div>
+<div id="dialog-box">
+
+</div>
+
+<script type="application/javascript">
+    if(readCookie("CurrentLanguage") === "English")
+    {
+        LanguageChange('english');
+    }
+    else if(readCookie("CurrentLanguage") === "Spanish")
+    {
+        LanguageChange('spanish');
+    }
+    /*function redirectToSS(){
+        window.location.href = "maincontents.htm";
+    }
+    var tempTime=setTimeout(redirectToSS,60000);
+
+    $(document).click(function(event) {
+        clearTimeout( tempTime );
+        tempTime=setTimeout(redirectToSS,240000);
+    });*/
+</script>
+
+</body>
+</html>
