@@ -25,17 +25,21 @@ function FC_ContentsCall(strContentsName, strLanguage)
         case "Home":
            location.href = "../../maincontents.htm";
             break;
-        case "Tips":
-            PlaySpeech(speak[0]);
-            location.href = "Contents/Tips/index.html";
+        case "Ventilation":
+            //PlaySpeech(speak[0]);
+            location.href = "Contents/Ventilation/index.html";
             break;
-        case "Products":
-            PlaySpeech(speak[1]);
-            location.href = "Contents/Products/index.html";
+        case "Compliance":
+            //PlaySpeech(speak[1]);
+            location.href = "Contents/Compliance/index.html";
             break;
-        case "Survey":
-            PlaySpeech(speak[2]);
-            location.href = "Contents/Survey/index.html";
+        case "AirMini":
+            //PlaySpeech(speak[2]);
+            location.href = "Contents/AirMini/index.html";
+            break;
+        case "Masks":
+            //PlaySpeech(speak[2]);
+            location.href = "Contents/Masks/index.html";
             break;
         
 
@@ -107,7 +111,7 @@ $(document).ready(function(){
 })
 
 
-setTimeout(function () {
+/*setTimeout(function () {
     ShowTime();
     console.log("Time Showed");
 
@@ -138,7 +142,7 @@ setTimeout(function () {
         console.log("Weather Showed");
     });
 
-}, 2000);
+}, 2000);*/
 
 
 
