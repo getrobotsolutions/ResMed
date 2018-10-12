@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 
 $('#SendEmail').click(function(){
-            var $action = "https://robotaisolutions.com/novartis/index.php";
+            var $action = "http://getrobotsolutions.com/resmed/index.php";
             //var pdf="https://drive.google.com/file/d/0B8Xsf8KvfUZ0Ym1jQ2RxQko2bGRXZkJzcmowbWRINzFuQk5N/preview";
             var $data = {'email':message, 'pdf':pdf};
             //var $this = $(this);

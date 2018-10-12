@@ -184,21 +184,21 @@ p{
   margin-bottom: 50px;
   border-radius: 5px;
   text-align: center;
-  padding: 20px;
+  /*padding: 20px;*/
 
 }
-.nav-box img{
-  width: 300px;
-  -webkit-box-shadow: 0px 0px 49px -1px rgba(2,105,153,0.44);
-  -moz-box-shadow: 0px 0px 49px -1px rgba(2,105,153,0.44);
-  box-shadow: 0px 0px 49px -1px rgba(2,105,153,0.44);
-  border-radius: 5px;
-}
 .nav-box h1{
+  color: white;
   width: 300px;
-  height: 70px;
+  //height: 70px;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
+}
+.nav-box-inner{
+  background-image: url('../../common/images/button-bg.png');
+  background-size: cover;
+  height: 330px;
+  padding: 100px 10px;
 }
 .keyboard { 
   text-align: center;

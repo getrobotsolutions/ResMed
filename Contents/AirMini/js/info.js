@@ -12,7 +12,7 @@ $(document).click(function(event) {
     initial=setTimeout(redirect,60000);
 });
 //-----------------------------------------------------
-
+var pdf="";
 
 function LanguageChange(lang)
 {
@@ -44,9 +44,18 @@ location.reload();
 
 $(document).ready(function(){
 
-   $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+   $('a.btn-ok').click(function () {   
       $('#dialog-overlay, #dialog-box').hide();   
       return false;
+    });
+   $('.btn-ok').click(function () {   
+      $('#dialog-overlay1, #dialog-box1').hide();   
+      return false;
+    });
+   $('.email').click(function(){
+      pdf=$(this).attr('dir')
+      $("#keyboard").show();
+      //ShowEmailPopup();
     });
 
   $("#btn").click(function () {
@@ -67,7 +76,74 @@ $("#obj").attr("date","images/60659708_KPGAPRRevision_GA-MMC_GA_2017_Brch_FINAL.
 $("#obj").load("images/60659708_KPGAPRRevision_GA-MMC_GA_2017_Brch_FINAL.PDF");
   });
 
+
+$('#SendEmail').click(function(){
+            var $action = "http://getrobotsolutions.com/resmed/index.php";
+            //var pdf="https://drive.google.com/file/d/0B8Xsf8KvfUZ0Ym1jQ2RxQko2bGRXZkJzcmowbWRINzFuQk5N/preview";
+            var $data = {'email':message, 'pdf':pdf};
+            //var $this = $(this);
+
+            //$this.prevAll('.alert').remove();
+
+            $.post( $action, $data, function( data ) {
+
+                if( data.response=='error' ){
+
+                    $this.before( '<div class="alert danger-border"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <i class="mdi mdi-close-box"></i> '+data.message+'</div>' );
+                }
+
+                if( data.response=='success' ){
+                    $('#keyboard').hide();
+                    ShowEmailPopup();//$this.after('<div class="alert success-border">Thank You</div>');
+
+                }
+            }, "json");
 });
+
+});
+function ShowKeyboard()
+{
+    // 사진이 촬영되기 전에 클릭시 무시
+    if (isPhotoTaken == false)
+        return;
+    
+    // 키보드 보이기
+    document.getElementById("keyboard").style.display = "block";
+    
+    // 메일 전송 안내 스피치
+    if (isRobot)
+    {
+        //window.external.PlaySpeech(speechJsonObj["email"][c_language]);
+    }
+}
+
+/* 키보드 숨김 */
+function HideKeyboard()
+{
+    // 키보드 숨김
+    document.getElementById("keyboard").style.display = "none";
+    
+    // 메일 주소 초기화
+    message = "";
+    document.getElementById("address").innerHTML = message;
+}
+
+/* 메일 주소 입력 */
+var message = "";
+function keyboard(strPara)
+{
+  if (strPara == "bs")
+    {
+    message = message.slice(0, -1);
+  }
+  
+  else
+    {
+    message += strPara;
+  }
+
+  document.getElementById("address").innerHTML = message;
+}
 
 
 function ShowPopup(src){
@@ -78,26 +154,32 @@ function ShowPopup(src){
   
   // calculate the values for center alignment
 var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());  
-var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+var dialogLeft = (maskWidth/2) - ($('#dialog-box1').width()/2); 
   
   // assign values to the overlay and dialog box
-  $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
-  $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+  $('#dialog-overlay1').css({height:maskHeight, width:maskWidth}).show();
+  $('#dialog-box1').css({top:dialogTop, left:dialogLeft}).show();
   
-  if (src=="") {
-    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="images/offers/404.png"/></div></div>';
+  
+    document.getElementById('dialog-content1').innerHTML = '<div id="dialog-message"><iframe width="800" height="560" src="'+src+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
+  
   }
-  else{
-    if(readCookie("CurrentLanguage") === "English")
-      PlaySpeech("Please take a picture with your phone and show Merchant for your special offer.");
-    else if(readCookie("CurrentLanguage") === "Spanish")
-      PlaySpeech("Por favor, tome una foto con su teléfono y muestre al comerciante su oferta especial.");
-  
-  document.getElementById('dialog-box').innerHTML = '<p style="width:  70%;display:  block;float:  left;font-size: 29px;padding: 20px;">Take Picture and Show merchant</p><a href="#" class="button" style="float: left;position:  relative;top: 20px;">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
-  //$("#dialog-box").append('<div class="dialog-content"><div id="dialog-message">'+ message +'</div><a href="#" class="button">Close</a></div>');
-    }
-}
+function ShowEmailPopup(){
 
+// get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+
+    // calculate the values for center alignment
+    var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());
+    var dialogLeft = (maskWidth/2) - ($('#dialog-box-form').width()/2);
+
+    // assign values to the overlay and dialog box
+    $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+    $('#dialog-box-form').css({top:dialogTop, left:dialogLeft}).show();
+
+    //document.getElementById('dialog-box-form').innerHTML = '<form method="post" style="text-align: center;" action="https://robotaisolutions.com/novartis/index.php" name="contact_form" id="contactForm"><input type="email" name="email" id="email"></br><input type="submit" name="send" value="send"></form>'
+}
 function ShowPopupARS(src){
 
 // get the screen height and width
@@ -113,4 +195,20 @@ function ShowPopupARS(src){
     $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
 
     document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
+}
+function ShowPdfPopup(src){
+
+// get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+
+    // calculate the values for center alignment
+    var dialogTop =  '30%';//(maskHeight/3) - ($('#dialog-box').height());
+    var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2);
+
+    // assign values to the overlay and dialog box
+    $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+    $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+
+    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button btn-ok">Close</a><iframe src="'+src+'" width="100%" height="1000" ></iframe>';
 }

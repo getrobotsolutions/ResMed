@@ -16,7 +16,7 @@
       width: 550px;
       height: 380px;
     }
-  #dialog-overlay {
+  #dialog-overlay1 {
 
   /* set it to fill the whil screen */
   width:100%; 
@@ -38,7 +38,7 @@
   display:none;
 }
 
-#dialog-box {
+#dialog-box1 {
   
   /* css3 drop shadow */
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -61,8 +61,8 @@
   /* hide it by default */
   display:none;
 }
-
-#dialog-box .dialog-content {
+ .dialog-content1 {  padding-left: 25px;}
+#dialog-box1 .dialog-content {
   /* style the content */
   max-height: 1200px;
   overflow: hidden;
@@ -113,11 +113,11 @@ a.button:hover {
 }
 
 /* extra styling */
-#dialog-box .dialog-content p {
+#dialog-box1 .dialog-content p {
   font-weight:700; margin:0;
 }
 
-#dialog-box .dialog-content ul {
+#dialog-box1 .dialog-content ul {
   margin:10px 0 10px 20px; 
   padding:0; 
   height:50px;
@@ -138,4 +138,81 @@ p{
   -webkit-box-shadow: 0px 0px 49px -1px rgba(2,105,153,0.44);
   -moz-box-shadow: 0px 0px 49px -1px rgba(2,105,153,0.44);
   box-shadow: 0px 0px 49px -1px rgba(2,105,153,0.44);
+}
+.nav-box{
+  margin-bottom: 50px;
+  border-radius: 5px;
+  text-align: center;
+  /*padding: 20px;*/
+
+}
+.nav-box h1{
+  color: white;
+  width: 300px;
+  //height: 70px;
+  text-align: center;
+  font-size: 40px;
+}
+.nav-box-inner{
+  background-image: url('../../common/images/button-bg.png');
+  background-size: cover;
+  height: 340px;
+  padding: 70px 10px;
+  width: 340px;
+}
+iframe{
+  z-index: 1000;
+}
+.keyboard { 
+  text-align: center;
+  background-image: url('../Images/keyboard/keyboard_bg.png');
+  background-repeat: no-repeat;
+  width: 1080px;
+  
+  position: absolute;
+      top: 1000px;
+    z-index: 10111;
+}
+
+.top{
+  margin-right: 10px;
+  margin-top: 5px;
+  padding-top: 15px;
+  text-align: right;
+}
+
+.address {
+    position: absolute;
+  left: 110px;
+  margin-top: 25px; 
+}
+
+.wrap {
+  margin-top: 30px;
+}
+.line01 {
+  
+}
+
+.line02 {
+  position:absolute;
+  margin-left: 60px;
+}
+
+.line03 {
+  margin-right: 80px;
+  margin-top: -95px;
+}
+
+.line04 {
+  margin-right: 40px;
+}
+
+.line05 {
+  
+}
+
+.enter {
+  margin-left: 880px;
+  margin-top: 3px;
 }
