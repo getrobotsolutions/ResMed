@@ -61,6 +61,19 @@
   /* hide it by default */
   display:none;
 }
+#dialog-box-form {
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #eee;
+    width: 650px;
+    position: absolute;
+    top: 40% !important;
+    z-index: 5000;
+    display: none;
+    padding: 30px;
+}
  .dialog-content1 {  padding-left: 25px;}
 #dialog-box1 .dialog-content {
   /* style the content */
