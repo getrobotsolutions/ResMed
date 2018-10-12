@@ -195,10 +195,17 @@ p{
   border-radius: 5px;
 }
 .nav-box h1{
+  color: white;
   width: 300px;
-  height: 70px;
+  //height: 70px;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
+}
+.nav-box-inner{
+  background-image: url('../../common/images/button-bg.png');
+  background-size: cover;
+  height: 320px;
+  padding: 70px 10px;
 }
 .keyboard { 
   text-align: center;
