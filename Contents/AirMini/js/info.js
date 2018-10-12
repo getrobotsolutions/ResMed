@@ -49,7 +49,8 @@ $(document).ready(function(){
       return false;
     });
    $('.btn-ok').click(function () {   
-      $('#dialog-overlay1, #dialog-box1').hide();   
+      $('#dialog-overlay1, #dialog-box1').hide();
+      $('#dialog-box1').empty();   
       return false;
     });
    $('.email').click(function(){
