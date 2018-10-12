@@ -50,7 +50,7 @@ $(document).ready(function(){
     });
    $('.btn-ok').click(function () {   
       $('#dialog-overlay1, #dialog-box1').hide();
-      $('#dialog-box1').empty();   
+      $('#dialog-content1').empty();   
       return false;
     });
    $('.email').click(function(){
