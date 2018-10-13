@@ -7,8 +7,8 @@
         speak[3] = "Read a welcome message from our dean.";
         speak[4] = "Find out what classes you need for your major.";
         speak[5] = "";
-        speak[6] = "Say Cheese! ";
-        speak[7] = "Smile! You are about to become a robot.";
+        speak[6] = "Touch the camera icon and then say cheese.";
+        speak[7] = "e cool like me and become a robot, touch the camera icon on my screen.";
         speak[8] = "Pick a song and let’s boogie!";
 
 //window.external.ChangeLanguage("en-us");
