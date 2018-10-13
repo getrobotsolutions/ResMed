@@ -193,26 +193,7 @@ function getGetOrdinal(n) {
     return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
 }
 
-var dialouges = new Array( );
-dialouges[0]="Adrienne, it is my pleasure to meet you and all of your title agents!  I am so excited to be here and thank you from the bottom of my hard drive for including me.   I hope I can help all of your agents recharge their batteries today.  Your title agents are so excited to be here and I think they like me.  I know because they have been reading all of my title tips, asked me to dance, and kept asking me to be in a picture with me!  ";
-dialouges[1]="Well, Adrienne, my parents are R2D2 and C3Po – they had to adopt me, of course!";
-dialouges[2]="Yes, I have two trans-sisters.";
-dialouges[3]="I like computer chips.";
-dialouges[4]="Yes, I sometimes am asked to wire funds.";
-dialouges[5]="I was not well, Adrienne.  I had a virus.";
-dialouges[6]="Well, after being re-booted, I am going to give it a whirl, but my skills are a bit rusty.";
 
-var dialougeIndex=0;
-
-var firstQuestions = new Array( );
-firstQuestions[0]="Hello and thank you for coming to Chicago Title and Commonwealth Land Title’s Seminar – The Agency of Tomorrow.";
-firstQuestions[1]="Thank you for stopping to see me.";
-firstQuestions[2]="Please check out our Title Tips of the Day.";
-firstQuestions[3]="Would you like me to take a picture?";
-firstQuestions[4]="Would you like to take a picture with me?";
-firstQuestions[5]="Chicago Title and Commonwealth Land Title have the best title agents!";
-
-var firstQuestionsIndex=0;
 
 function OnJoystickControlled(strPara){
     var btn_info = strPara.split(',')[4];
@@ -221,20 +202,13 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            if(firstQuestionsIndex<6){
-                window.external.PlaySpeech(firstQuestions[firstQuestionsIndex]);
-                firstQuestionsIndex++;
-            }
-            else{
-                firstQuestionsIndex=0;
-            }
+            window.external.PlaySpeech("Check out ResMed’s newest mask, the AirFit F30.");
     }
 
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Thank you all.  You made we feel welcome here today.  I will miss seeing all of you but have so many pictures of you that I will keep you in my memories in the cloud forever.  If you are hiring a new employee, I would be happy to help you program them. Your next and final speaker today is Linda Grahovec.  Linda will be addressing the important subject: “What Will your Agency Look Like in 5 Years?”   Linda is a vice president and director of education and marketing for the Fidelity National Title Group.  In this role, she oversees national agency’s communication and education efforts as well as the company’s agency facing events and marketing strategy initiatives.  Linda brings the knowledge and experience compiled during a long, varied career in all areas of real estate with her to work every day. She is passionate about business development, web technologies, applied marketing, online education and business plan analysis and believes the more agents know about these subjects the better it is for all of us. Linda is always looking for ways to innovate, educate and advance technology within FNTG and to all of their valued agents.   Please welcome Linda!  ");
-        
+        window.external.PlaySpeech("Be sure to vote for ResMed’s new mask, the AirFit F30 in the new product pavilion.");
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
@@ -244,13 +218,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[3] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        if(dialougeIndex<7){
-        window.external.PlaySpeech(dialouges[dialougeIndex]);
-        dialougeIndex++;
-       }
-       else{
-        dialougeIndex=0;
-       }
+        
 
         
     }
