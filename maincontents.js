@@ -202,13 +202,13 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
             window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("Check out ResMed’s newest mask, the AirFit F30.");
+            window.external.PlaySpeech("Check out Resmed newest mask, the AirFit F30.");
     }
 
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("Be sure to vote for ResMed’s new mask, the AirFit F30 in the new product pavilion.");
+        window.external.PlaySpeech("Be sure to vote for Resmed new mask, the AirFit F30 in the new product pavilion.");
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
