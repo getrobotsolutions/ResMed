@@ -1,6 +1,6 @@
 a.btn-ok{
-  position: absolute;
-  right: 0px;
+  position: absolute !important;
+  right: 0px !important;
   width: 60px !important;
 }
 .bmg{

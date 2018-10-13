@@ -148,6 +148,11 @@ a.button {
   cursor: pointer;
   
 }
+a.btn-ok{
+  position: absolute !important;
+  right: 0px !important;
+  width: 60px !important;
+}
 
 a.button:hover {
   /*background-color: #c33100;  */

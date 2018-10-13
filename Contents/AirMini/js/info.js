@@ -45,7 +45,7 @@ location.reload();
 $(document).ready(function(){
 
    $('a.btn-ok').click(function () {   
-      $('#dialog-overlay, #dialog-box').hide();   
+      $('#dialog-overlay, #dialog-box, #dialog-box-form').hide();   
       return false;
     });
    $('.btn-ok').click(function () {   
@@ -195,7 +195,7 @@ function ShowPopupARS(src){
     $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
     $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
 
-    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
+    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">X</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="'+ src +'"/></div></div>';
 }
 function ShowPdfPopup(src){
 
@@ -211,5 +211,5 @@ function ShowPdfPopup(src){
     $('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
     $('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
 
-    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button btn-ok">Close</a><iframe src="'+src+'" width="100%" height="1000" ></iframe>';
+    document.getElementById('dialog-box').innerHTML = '<a href="#" class="button btn-ok">X</a><iframe src="'+src+'" width="100%" height="1000" ></iframe>';
 }
