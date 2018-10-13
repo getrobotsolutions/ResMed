@@ -171,7 +171,7 @@ function CountDown()
         {
             document.getElementById("number_img").src = "Images/"+counter+".png";
         }
-    }, 1000);
+    }, 1500);
 }
 
 //---------------------------------------------------------------------------//
