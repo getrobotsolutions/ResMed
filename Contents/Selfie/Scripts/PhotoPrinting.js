@@ -130,6 +130,8 @@ function TakePhoto()
     // 카운트 다운 이미지 보이기 & 카운트다운
     document.getElementById("number_img").style.display = "block";
     CountDown();
+    SelectFrame(2)
+
 }
 
 //---------------------------------------------------------------------------//
