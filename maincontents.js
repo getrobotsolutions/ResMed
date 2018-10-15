@@ -218,6 +218,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[3] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
+        window.external.PlaySpeech("Can I please take your picture?");
         
 
         
