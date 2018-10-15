@@ -110,7 +110,8 @@ function UpdateCamImage()
 //---------------------------------------------------------------------------//
 var isPhotoTaken = false;
 function TakePhoto()
-{   
+{
+    SelectFrame(2);
     window.external.SetVolume(1);
     if(readCookie("CurrentLanguage")=="English"){
         window.external.ChangeLanguage("en-us");
@@ -130,8 +131,6 @@ function TakePhoto()
     // 카운트 다운 이미지 보이기 & 카운트다운
     document.getElementById("number_img").style.display = "block";
     CountDown();
-    SelectFrame(2);
-
 }
 
 //---------------------------------------------------------------------------//
