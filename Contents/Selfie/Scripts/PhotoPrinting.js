@@ -298,6 +298,7 @@ function SaveImage(str)
 	var directory = curPath + "/../Resources/Photo/";
 	
 	imageFilePath = directory + str + ".jpg";
+    window.external.SaveImage(imageFilePath, frameImagePath);
 	if (isRobot)
     {
         window.external.SaveImage(imageFilePath, frameImagePath);
