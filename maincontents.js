@@ -208,12 +208,12 @@ function OnJoystickControlled(strPara){
     if(btn_info[1] == '1'){
         window.external.ChangeLanguage("en-us");
         SetVolume(1);
-        window.external.PlaySpeech("e sure to vote for the new mask by Resmed, the AirFit F30 in the new product pavilion.");
+        window.external.PlaySpeech("Be sure to vote for the new mask by Resmed, the AirFit F30 in the new product pavilion.");
     }
     if(btn_info[2] == '1'){
         window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            //window.external.PlaySpeech("Chicago Title and Commonwealth Land Title have the best title agents!");
+            window.external.PlaySpeech("Hi, I like you.  Please touch the buttons on my screen to learn about Resmed products.");
     }
     if(btn_info[3] == '1'){
         window.external.ChangeLanguage("en-us");
