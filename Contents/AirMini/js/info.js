@@ -81,7 +81,7 @@ $("#obj").load("images/60659708_KPGAPRRevision_GA-MMC_GA_2017_Brch_FINAL.PDF");
 $('#SendEmail').click(function(){
             var $action = "http://getrobotsolutions.com/resmed/index.php";
             //var pdf="https://drive.google.com/file/d/0B8Xsf8KvfUZ0Ym1jQ2RxQko2bGRXZkJzcmowbWRINzFuQk5N/preview";
-            var $data = {'email':message, 'pdf':pdf};
+            var $data = {'pageId': 3,'email':message, 'pdf':pdf};
             //var $this = $(this);
 
             //$this.prevAll('.alert').remove();
